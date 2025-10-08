@@ -101,6 +101,29 @@
         .emoji {
             font-size: 3em;
         }
+
+        /* --- STYLES FOR MOBILE DEVICES --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .slide {
+                padding: 20px;
+            }
+            .slide-title {
+                padding: 40px 20px;
+            }
+            .slide-title h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            .columns {
+                flex-direction: column; /* This is the key change */
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -239,5 +262,3 @@
 
 </body>
 </html>
-
-
