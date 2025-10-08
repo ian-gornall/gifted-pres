@@ -98,30 +98,42 @@
         .final-slide a:hover {
             text-decoration: underline;
         }
+        .final-slide img {
+             /* Set a max-width for large screens if needed */
+            max-width: 200px; 
+            margin-top: 20px;
+        }
         .emoji {
             font-size: 3em;
         }
 
         /* --- STYLES FOR MOBILE DEVICES --- */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
             .slide {
-                padding: 20px;
+                padding: 25px;
             }
             .slide-title {
-                padding: 40px 20px;
+                padding: 40px 25px;
             }
             .slide-title h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
             h2 {
-                font-size: 1.8em;
+                font-size: 1.9em;
             }
             .columns {
-                flex-direction: column; /* This is the key change */
+                flex-direction: column; /* Stacks the columns vertically */
                 gap: 20px;
+            }
+            .final-slide img {
+                /* This is the key fix for the image */
+                max-width: 150px; /* Adjust size for mobile */
+                height: auto;     /* Maintains aspect ratio */
+                display: block;   /* Allows for margin auto to work */
+                margin: 20px auto 0; /* Centers the image */
             }
         }
     </style>
